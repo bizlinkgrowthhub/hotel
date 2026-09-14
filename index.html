@@ -1,29 +1,26 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Hotel AR - Experience luxury, comfort and exceptional hospitality in Noida.">
+        content="Hotel AR - Luxury rooms, premium hospitality and comfortable stay in Noida, Uttar Pradesh.">
 
     <meta name="keywords"
-        content="Hotel AR, Luxury Hotel Noida, Hotel in Noida, Best Hotel Noida">
+        content="Hotel AR, Hotel in Noida, Luxury Hotel Noida, Rooms in Noida, Best Hotel Noida">
 
     <meta name="author" content="Hotel AR">
 
-    <title>Hotel AR | Luxury Stay</title>
+    <title>Hotel AR | Luxury Stay in Noida</title>
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -33,9 +30,9 @@
 
     <style>
 
-        /* =========================
-           RESET
-        ========================= */
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
 
         * {
             margin: 0;
@@ -49,19 +46,17 @@
 
         body {
             font-family: "Montserrat", sans-serif;
-            background: #fff;
             color: #222;
+            background: #fff;
             line-height: 1.7;
         }
 
         a {
             text-decoration: none;
-            color: inherit;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
+        ul {
+            list-style: none;
         }
 
         .container {
@@ -70,137 +65,165 @@
             padding: 0 25px;
         }
 
+        .gold {
+            color: #d4af37;
+        }
 
-        /* =========================
+
+        /* =====================================================
            NAVBAR
-        ========================= */
+        ===================================================== */
 
         #navbar {
             position: absolute;
-            width: 100%;
             top: 0;
             left: 0;
-            z-index: 1000;
+            width: 100%;
+            z-index: 999;
 
             background: rgba(0, 0, 0, 0.35);
+
             border-bottom: 1px solid rgba(255,255,255,0.15);
         }
 
         #navbar .container {
-            height: 80px;
+            min-height: 82px;
 
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
             font-family: "Playfair Display", serif;
             font-size: 42px;
-            color: #fff;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
         }
 
         .logo a {
             color: #fff;
         }
 
+        .logo span {
+            color: #d4af37;
+        }
+
         #navbar ul {
             display: flex;
-            list-style: none;
-            gap: 10px;
+            align-items: center;
+            gap: 5px;
         }
 
         #navbar ul li a {
             display: block;
 
-            color: #fff;
-            padding: 10px 18px;
+            padding: 10px 17px;
 
-            font-size: 14px;
+            color: #fff;
+
+            font-size: 13px;
             font-weight: 600;
 
             text-transform: uppercase;
             letter-spacing: 1px;
 
-            border-radius: 4px;
+            border-radius: 3px;
 
             transition: 0.3s;
         }
 
         #navbar ul li a:hover,
-        #navbar ul li a.current {
-            background: #c9a227;
+        #navbar ul li a.active {
+            background: #d4af37;
             color: #111;
         }
 
 
-        /* =========================
+        /* =====================================================
            HERO
-        ========================= */
+        ===================================================== */
 
-        #showcase {
+        #hero {
             min-height: 100vh;
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.65),
-                    rgba(0,0,0,0.45)
-                ),
-                url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85")
-                center center / cover no-repeat;
 
             display: flex;
             align-items: center;
 
             color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.42)
+                ),
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=90")
+                center center / cover no-repeat;
         }
 
-        .showcase-content {
-            max-width: 760px;
+        .hero-content {
+            max-width: 780px;
             padding-top: 80px;
         }
 
-        .showcase-content h1 {
+        .hero-small {
+            color: #d4af37;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(48px, 7vw, 86px);
+            font-size: clamp(52px, 7vw, 88px);
 
-            line-height: 1.1;
+            line-height: 1.05;
 
             margin-bottom: 25px;
         }
 
-        .text-primary {
+        .hero-content h1 span {
             color: #d4af37;
         }
 
-        .lead {
-            font-size: 20px;
+        .hero-content p {
             max-width: 650px;
 
             color: rgba(255,255,255,0.9);
 
+            font-size: 18px;
+
             margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
 
+            padding: 14px 28px;
+
             background: #d4af37;
             color: #111;
 
-            padding: 14px 28px;
-
+            font-size: 13px;
             font-weight: 700;
-            font-size: 14px;
 
             text-transform: uppercase;
             letter-spacing: 1px;
 
-            border-radius: 4px;
+            border-radius: 3px;
 
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -208,146 +231,154 @@
             transform: translateY(-3px);
         }
 
-        .btn-light {
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+
+            border: 1px solid #fff;
+        }
+
+        .btn-outline:hover {
             background: #fff;
             color: #111;
         }
 
-        .btn-light:hover {
-            background: #d4af37;
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        #intro {
+            padding: 90px 0;
+            background: #fff;
         }
 
-
-        /* =========================
-           ABOUT / HISTORY
-        ========================= */
-
-        #home-info {
+        .intro-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 60px;
 
-            min-height: 520px;
+            align-items: center;
         }
 
-        .info-img {
+        .intro-image {
+            min-height: 500px;
+
             background:
-                linear-gradient(
-                    rgba(0,0,0,0.15),
-                    rgba(0,0,0,0.15)
-                ),
-                url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85")
+                url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=90")
                 center / cover no-repeat;
         }
 
-        .info-content {
-            background: #171717;
-            color: #fff;
+        .section-label {
+            color: #b08a16;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
 
-            padding: 70px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            margin-bottom: 10px;
         }
 
-        .info-content h2 {
+        .section-title {
             font-family: "Playfair Display", serif;
 
-            font-size: 44px;
+            font-size: 48px;
+
             line-height: 1.2;
 
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
-        .info-content p {
-            color: #ddd;
+        .intro-text p {
+            color: #666;
 
-            margin-bottom: 30px;
+            margin-bottom: 18px;
+        }
 
-            max-width: 600px;
+        .intro-list {
+            margin: 25px 0;
+        }
+
+        .intro-list li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .intro-list i {
+            color: #c9a227;
+            margin-right: 10px;
         }
 
 
-        /* =========================
+        /* =====================================================
            FEATURES
-        ========================= */
+        ===================================================== */
 
         #features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .box {
+        .feature {
             text-align: center;
 
             padding: 65px 35px;
 
-            min-height: 280px;
+            min-height: 290px;
         }
 
-        .box i {
+        .feature:nth-child(1),
+        .feature:nth-child(3) {
+            background: #f7f5ef;
+        }
+
+        .feature:nth-child(2) {
+            background: #d4af37;
+        }
+
+        .feature i {
+            font-size: 38px;
             margin-bottom: 20px;
         }
 
-        .box h3 {
+        .feature h3 {
             font-family: "Playfair Display", serif;
 
-            font-size: 26px;
+            font-size: 27px;
 
             margin-bottom: 12px;
         }
 
-        .box p {
+        .feature p {
             max-width: 350px;
             margin: auto;
         }
 
-        .bg-light {
-            background: #f7f5ef;
-            color: #222;
-        }
 
-        .bg-primary {
-            background: #d4af37;
-            color: #111;
-        }
-
-
-        /* =========================
-           ROOMS SECTION
-        ========================= */
+        /* =====================================================
+           ROOMS
+        ===================================================== */
 
         #rooms {
-            padding: 90px 0;
-
+            padding: 100px 0;
             background: #fff;
         }
 
-        .section-title {
+        .heading-center {
             text-align: center;
-
             margin-bottom: 55px;
         }
 
-        .section-title span {
-            display: block;
-
-            color: #c9a227;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 8px;
+        .heading-center .section-title {
+            margin-bottom: 10px;
         }
 
-        .section-title h2 {
-            font-family: "Playfair Display", serif;
-
-            font-size: 45px;
+        .heading-center p {
+            color: #777;
+            max-width: 650px;
+            margin: auto;
         }
 
         .room-grid {
@@ -360,84 +391,107 @@
         .room-card {
             background: #fff;
 
-            border: 1px solid #eee;
+            border: 1px solid #e8e8e8;
 
             overflow: hidden;
 
-            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
 
-            transition: 0.3s;
+            transition: 0.35s;
         }
 
         .room-card:hover {
             transform: translateY(-8px);
 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.13);
         }
 
-        .room-image {
-            height: 240px;
+        .room-img {
+            height: 250px;
 
             background-size: cover;
             background-position: center;
         }
 
-        .room-1 {
+        .room-img-1 {
             background-image:
-                url("https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=85");
+                url("https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=90");
         }
 
-        .room-2 {
+        .room-img-2 {
             background-image:
-                url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85");
+                url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=90");
         }
 
-        .room-3 {
+        .room-img-3 {
             background-image:
-                url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85");
+                url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=90");
         }
 
-        .room-details {
+        .room-info {
             padding: 28px;
         }
 
-        .room-details h3 {
+        .room-info h3 {
             font-family: "Playfair Display", serif;
 
-            font-size: 25px;
+            font-size: 27px;
 
             margin-bottom: 8px;
         }
 
-        .room-details p {
-            color: #666;
+        .room-info p {
+            color: #777;
 
             font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+        .room-features {
+            display: flex;
+
+            gap: 15px;
+            flex-wrap: wrap;
 
             margin-bottom: 20px;
         }
 
-        .room-price {
-            color: #b18b16;
+        .room-features span {
+            font-size: 12px;
+            color: #555;
+        }
 
-            font-size: 20px;
+        .room-features i {
+            color: #c9a227;
+            margin-right: 5px;
+        }
+
+        .price {
+            color: #a47e10;
+
+            font-size: 21px;
             font-weight: 700;
         }
 
+        .price small {
+            font-size: 12px;
+            color: #777;
+            font-weight: 400;
+        }
 
-        /* =========================
+
+        /* =====================================================
            AMENITIES
-        ========================= */
+        ===================================================== */
 
         #amenities {
-            padding: 90px 0;
-
+            padding: 100px 0;
             background: #f7f5ef;
         }
 
         .amenity-grid {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
 
             gap: 20px;
@@ -446,11 +500,11 @@
         .amenity {
             background: #fff;
 
-            padding: 35px 20px;
-
             text-align: center;
 
-            border: 1px solid #eee;
+            padding: 35px 20px;
+
+            border: 1px solid #e9e5da;
 
             transition: 0.3s;
         }
@@ -468,15 +522,79 @@
         }
 
         .amenity h4 {
-            font-size: 16px;
+            font-size: 15px;
         }
 
 
-        /* =========================
-           CTA
-        ========================= */
+        /* =====================================================
+           GALLERY
+        ===================================================== */
 
-        #cta {
+        #gallery {
+            padding: 100px 0;
+            background: #111;
+        }
+
+        #gallery .section-label {
+            color: #d4af37;
+        }
+
+        #gallery .section-title {
+            color: #fff;
+        }
+
+        #gallery .heading-center p {
+            color: #aaa;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+        .gallery-item {
+            height: 260px;
+
+            background-size: cover;
+            background-position: center;
+
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            opacity: 0.85;
+        }
+
+        .gallery-1 {
+            background-image:
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .gallery-2 {
+            background-image:
+                url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .gallery-3 {
+            background-image:
+                url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .gallery-4 {
+            background-image:
+                url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85");
+        }
+
+
+        /* =====================================================
+           BOOKING CTA
+        ===================================================== */
+
+        #booking {
             padding: 100px 20px;
 
             text-align: center;
@@ -485,42 +603,90 @@
 
             background:
                 linear-gradient(
-                    rgba(0,0,0,0.7),
-                    rgba(0,0,0,0.7)
+                    rgba(0,0,0,0.72),
+                    rgba(0,0,0,0.72)
                 ),
-                url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=85")
+                url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=90")
                 center / cover no-repeat;
         }
 
-        #cta h2 {
+        #booking h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: 48px;
+            font-size: 50px;
 
             margin-bottom: 15px;
         }
 
-        #cta p {
-            margin-bottom: 30px;
-
+        #booking p {
             color: #ddd;
+
+            max-width: 650px;
+
+            margin: 0 auto 30px;
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* =====================================================
+           CONTACT
+        ===================================================== */
 
-        #main-footer {
-            background: #111;
+        #contact {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+        .contact-box {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #f7f5ef;
+        }
+
+        .contact-box i {
+            color: #c9a227;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-box h4 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+        }
+
+        .contact-box p {
+            color: #666;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #0d0d0d;
 
             color: #aaa;
 
             text-align: center;
 
-            padding: 35px 20px;
-
-            font-size: 13px;
+            padding: 45px 20px;
         }
 
         .footer-logo {
@@ -528,58 +694,63 @@
 
             color: #fff;
 
-            font-size: 30px;
+            font-size: 34px;
+
+            letter-spacing: 4px;
 
             margin-bottom: 8px;
         }
 
+        .footer-gold {
+            color: #d4af37;
+        }
 
-        /* =========================
-           FLOATING WHATSAPP
-        ========================= */
+        footer p {
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           WHATSAPP BUTTON
+        ===================================================== */
 
         .whatsapp {
             position: fixed;
 
-            right: 20px;
-            bottom: 20px;
+            right: 22px;
+            bottom: 22px;
 
-            width: 58px;
-            height: 58px;
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #25D366;
+            color: #fff;
 
             border-radius: 50%;
 
-            background: #25D366;
-
-            color: #fff;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 29px;
+            font-size: 30px;
 
             z-index: 9999;
 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
 
             transition: 0.3s;
         }
 
         .whatsapp:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
 
-        @media (max-width: 900px) {
-
-            #features {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 1000px) {
 
             .room-grid {
                 grid-template-columns: 1fr 1fr;
@@ -589,20 +760,22 @@
                 grid-template-columns: 1fr 1fr;
             }
 
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
         }
 
 
         @media (max-width: 769px) {
 
             #navbar .container {
-                height: auto;
-
-                padding-top: 18px;
-                padding-bottom: 18px;
+                padding-top: 15px;
+                padding-bottom: 15px;
 
                 flex-direction: column;
 
-                gap: 15px;
+                gap: 12px;
             }
 
             .logo {
@@ -614,76 +787,98 @@
 
                 justify-content: center;
 
-                gap: 2px;
+                flex-wrap: wrap;
             }
 
             #navbar ul li a {
-                padding: 8px 10px;
+                padding: 7px 9px;
 
-                font-size: 11px;
+                font-size: 10px;
             }
 
-            #showcase {
-                min-height: 720px;
+
+            #hero {
+                min-height: 760px;
 
                 text-align: center;
             }
 
-            .showcase-content {
-                padding-top: 100px;
+            .hero-content {
+                padding-top: 110px;
             }
 
-            .showcase-content h1 {
+            .hero-content h1 {
                 font-size: 52px;
             }
 
-            .lead {
+            .hero-content p {
                 font-size: 16px;
             }
 
-            #home-info {
+            .hero-buttons {
+                justify-content: center;
+            }
+
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .intro-image {
+                min-height: 350px;
+            }
+
+            .section-title {
+                font-size: 38px;
+            }
+
+
+            #features {
                 grid-template-columns: 1fr;
             }
 
-            .info-img {
-                min-height: 330px;
-            }
-
-            .info-content {
-                padding: 50px 25px;
-            }
-
-            .info-content h2 {
-                font-size: 36px;
-            }
-
-            .box {
-                padding: 50px 25px;
-            }
 
             #rooms,
-            #amenities {
-                padding: 65px 20px;
+            #amenities,
+            #gallery,
+            #contact,
+            #intro {
+                padding: 70px 0;
             }
 
-            .section-title h2 {
-                font-size: 36px;
-            }
 
             .room-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .amenity-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
-            #cta {
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+
+            #booking {
                 padding: 75px 20px;
             }
 
-            #cta h2 {
+            #booking h2 {
                 font-size: 38px;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
 
         }
@@ -691,18 +886,46 @@
 
         @media (max-width: 480px) {
 
+            #navbar ul {
+                gap: 0;
+            }
+
+            #navbar ul li a {
+                padding: 6px 6px;
+                font-size: 9px;
+            }
+
+            .hero-content h1 {
+                font-size: 44px;
+            }
+
+            .hero-small {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .lead {
+                font-size: 15px;
+            }
+
             .amenity-grid {
                 grid-template-columns: 1fr;
             }
 
-            #navbar ul li a {
-                padding: 8px 7px;
-
-                font-size: 10px;
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
 
-            .showcase-content h1 {
-                font-size: 44px;
+            .gallery-item {
+                height: 240px;
+            }
+
+            .whatsapp {
+                width: 55px;
+                height: 55px;
+
+                right: 15px;
+                bottom: 15px;
             }
 
         }
@@ -715,80 +938,105 @@
 <body>
 
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
 
-    <header>
+    <nav id="navbar">
 
-        <nav id="navbar">
+        <div class="container">
+
+            <h1 class="logo">
+                <a href="#home">
+                    <span>H</span>AR
+                </a>
+            </h1>
+
+            <ul>
+
+                <li>
+                    <a href="#home" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#rooms">
+                        Rooms
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#amenities">
+                        Amenities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#gallery">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section id="home">
+
+        <div id="hero">
 
             <div class="container">
 
-                <h1 class="logo">
-                    <a href="#home">AR</a>
-                </h1>
+                <div class="hero-content">
 
-                <ul>
-
-                    <li>
-                        <a class="current" href="#home">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#rooms">
-                            Rooms
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#amenities">
-                            Amenities
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </nav>
-
-
-        <!-- ================= HERO ================= -->
-
-        <div id="showcase">
-
-            <div class="container">
-
-                <div class="showcase-content" id="home">
+                    <div class="hero-small">
+                        Welcome To Hotel AR
+                    </div>
 
                     <h1>
-                        <span class="text-primary">
-                            Enjoy
-                        </span>
-                        Your Stay
+                        <span>Luxury</span>
+                        Meets
+                        Comfort
                     </h1>
 
-                    <p class="lead">
-                        Experience comfort, elegance and
-                        exceptional hospitality at Hotel AR.
+                    <p>
+                        Experience a perfect blend of elegance,
+                        comfort and warm hospitality. Your memorable
+                        stay begins at Hotel AR.
                     </p>
 
-                    <a href="#rooms" class="btn">
-                        Explore Rooms
-                    </a>
+                    <div class="hero-buttons">
+
+                        <a href="#rooms" class="btn">
+                            Explore Rooms
+                        </a>
+
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Us
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -796,93 +1044,139 @@
 
         </div>
 
-    </header>
+    </section>
 
 
-    <!-- ================= ABOUT ================= -->
 
-    <section id="home-info">
+    <!-- =====================================================
+         ABOUT
+    ===================================================== -->
 
-        <div class="info-img"></div>
+    <section id="about">
 
-        <div class="info-content" id="about">
+        <div id="intro">
 
-            <h2>
+            <div class="container">
 
-                <span class="text-primary">
-                    The Experience
-                </span>
+                <div class="intro-grid">
 
-                at Hotel AR
+                    <div class="intro-image"></div>
 
-            </h2>
 
-            <p>
+                    <div class="intro-text">
 
-                Welcome to Hotel AR, where modern comfort
-                meets timeless hospitality. Whether you are
-                travelling for business or leisure, our goal
-                is to make every moment of your stay relaxing,
-                comfortable and memorable.
+                        <div class="section-label">
+                            About Hotel AR
+                        </div>
 
-            </p>
+                        <h2 class="section-title">
+                            A Stay Designed
+                            <span class="gold">Around You</span>
+                        </h2>
 
-            <a href="#rooms" class="btn btn-light">
-                Discover More
-            </a>
+                        <p>
+                            Welcome to Hotel AR, a place where
+                            modern comfort meets timeless hospitality.
+                            We believe every guest deserves a peaceful,
+                            comfortable and memorable experience.
+                        </p>
+
+                        <p>
+                            Whether you are visiting for business,
+                            leisure or a special occasion, our rooms
+                            and services are designed to make your stay
+                            truly enjoyable.
+                        </p>
+
+                        <ul class="intro-list">
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Comfortable & Elegant Rooms
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Friendly Hospitality
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Convenient Location
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Premium Guest Experience
+                            </li>
+
+                        </ul>
+
+                        <a href="#rooms" class="btn">
+                            View Rooms
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- ================= FEATURES ================= -->
+
+    <!-- =====================================================
+         FEATURES
+    ===================================================== -->
 
     <section id="features">
 
-        <div class="box bg-light">
+        <div class="feature">
 
-            <i class="fas fa-map-marker-alt fa-3x"></i>
+            <i class="fas fa-map-marker-alt"></i>
 
             <h3>
                 Great Location
             </h3>
 
             <p>
-                Easy access to major destinations,
-                shopping areas and attractions.
+                Convenient access to major destinations,
+                shopping areas and local attractions.
             </p>
 
         </div>
 
 
-        <div class="box bg-primary">
+        <div class="feature">
 
-            <i class="fas fa-utensils fa-3x"></i>
-
-            <h3>
-                Fine Dining
-            </h3>
-
-            <p>
-                Enjoy delicious food and a comfortable
-                dining experience.
-            </p>
-
-        </div>
-
-
-        <div class="box bg-light">
-
-            <i class="fas fa-concierge-bell fa-3x"></i>
+            <i class="fas fa-concierge-bell"></i>
 
             <h3>
                 Premium Service
             </h3>
 
             <p>
-                Friendly hospitality and attentive service
-                throughout your stay.
+                Thoughtful hospitality and attentive service
+                for a comfortable stay.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <i class="fas fa-utensils"></i>
+
+            <h3>
+                Fine Dining
+            </h3>
+
+            <p>
+                Enjoy delicious meals and a relaxing dining
+                experience during your stay.
             </p>
 
         </div>
@@ -890,21 +1184,29 @@
     </section>
 
 
-    <!-- ================= ROOMS ================= -->
+
+    <!-- =====================================================
+         ROOMS
+    ===================================================== -->
 
     <section id="rooms">
 
         <div class="container">
 
-            <div class="section-title">
+            <div class="heading-center">
 
-                <span>
+                <div class="section-label">
                     Stay With Us
-                </span>
+                </div>
 
-                <h2>
+                <h2 class="section-title">
                     Our Rooms
                 </h2>
+
+                <p>
+                    Choose a room that fits your needs and enjoy
+                    comfort, privacy and a relaxing atmosphere.
+                </p>
 
             </div>
 
@@ -912,23 +1214,45 @@
             <div class="room-grid">
 
 
+                <!-- ROOM 1 -->
+
                 <div class="room-card">
 
-                    <div class="room-image room-1"></div>
+                    <div class="room-img room-img-1"></div>
 
-                    <div class="room-details">
+                    <div class="room-info">
 
                         <h3>
                             Deluxe Room
                         </h3>
 
                         <p>
-                            Comfortable room designed for
-                            a relaxing and peaceful stay.
+                            A comfortable and elegant room perfect
+                            for couples and business travellers.
                         </p>
 
-                        <div class="room-price">
-                            From ₹2,999 / Night
+                        <div class="room-features">
+
+                            <span>
+                                <i class="fas fa-user"></i>
+                                2 Guests
+                            </span>
+
+                            <span>
+                                <i class="fas fa-wifi"></i>
+                                Wi-Fi
+                            </span>
+
+                            <span>
+                                <i class="fas fa-snowflake"></i>
+                                AC
+                            </span>
+
+                        </div>
+
+                        <div class="price">
+                            ₹2,999
+                            <small>/ Night</small>
                         </div>
 
                     </div>
@@ -936,23 +1260,46 @@
                 </div>
 
 
+
+                <!-- ROOM 2 -->
+
                 <div class="room-card">
 
-                    <div class="room-image room-2"></div>
+                    <div class="room-img room-img-2"></div>
 
-                    <div class="room-details">
+                    <div class="room-info">
 
                         <h3>
                             Executive Room
                         </h3>
 
                         <p>
-                            Spacious accommodation with
-                            premium comfort and amenities.
+                            Spacious accommodation with premium
+                            comfort and modern amenities.
                         </p>
 
-                        <div class="room-price">
-                            From ₹3,999 / Night
+                        <div class="room-features">
+
+                            <span>
+                                <i class="fas fa-user"></i>
+                                3 Guests
+                            </span>
+
+                            <span>
+                                <i class="fas fa-wifi"></i>
+                                Wi-Fi
+                            </span>
+
+                            <span>
+                                <i class="fas fa-tv"></i>
+                                TV
+                            </span>
+
+                        </div>
+
+                        <div class="price">
+                            ₹3,999
+                            <small>/ Night</small>
                         </div>
 
                     </div>
@@ -960,29 +1307,51 @@
                 </div>
 
 
+
+                <!-- ROOM 3 -->
+
                 <div class="room-card">
 
-                    <div class="room-image room-3"></div>
+                    <div class="room-img room-img-3"></div>
 
-                    <div class="room-details">
+                    <div class="room-info">
 
                         <h3>
                             Luxury Suite
                         </h3>
 
                         <p>
-                            An elegant suite for guests looking
-                            for an elevated hotel experience.
+                            An elegant suite created for guests
+                            looking for an elevated experience.
                         </p>
 
-                        <div class="room-price">
-                            From ₹5,999 / Night
+                        <div class="room-features">
+
+                            <span>
+                                <i class="fas fa-user"></i>
+                                4 Guests
+                            </span>
+
+                            <span>
+                                <i class="fas fa-wifi"></i>
+                                Wi-Fi
+                            </span>
+
+                            <span>
+                                <i class="fas fa-bath"></i>
+                                Bath
+                            </span>
+
+                        </div>
+
+                        <div class="price">
+                            ₹5,999
+                            <small>/ Night</small>
                         </div>
 
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -991,21 +1360,29 @@
     </section>
 
 
-    <!-- ================= AMENITIES ================= -->
+
+    <!-- =====================================================
+         AMENITIES
+    ===================================================== -->
 
     <section id="amenities">
 
         <div class="container">
 
-            <div class="section-title">
+            <div class="heading-center">
 
-                <span>
+                <div class="section-label">
                     Hotel Facilities
-                </span>
+                </div>
 
-                <h2>
+                <h2 class="section-title">
                     Our Amenities
                 </h2>
+
+                <p>
+                    Everything you need for a comfortable
+                    and convenient stay.
+                </p>
 
             </div>
 
@@ -1058,17 +1435,6 @@
 
                 <div class="amenity">
 
-                    <i class="fas fa-dumbbell"></i>
-
-                    <h4>
-                        Fitness Center
-                    </h4>
-
-                </div>
-
-
-                <div class="amenity">
-
                     <i class="fas fa-snowflake"></i>
 
                     <h4>
@@ -1083,7 +1449,7 @@
                     <i class="fas fa-tv"></i>
 
                     <h4>
-                        Smart TV
+                        Television
                     </h4>
 
                 </div>
@@ -1099,6 +1465,17 @@
 
                 </div>
 
+
+                <div class="amenity">
+
+                    <i class="fas fa-bell"></i>
+
+                    <h4>
+                        Front Desk
+                    </h4>
+
+                </div>
+
             </div>
 
         </div>
@@ -1106,19 +1483,67 @@
     </section>
 
 
-    <!-- ================= CTA ================= -->
 
-    <section id="cta">
+    <!-- =====================================================
+         GALLERY
+    ===================================================== -->
+
+    <section id="gallery">
+
+        <div class="container">
+
+            <div class="heading-center">
+
+                <div class="section-label">
+                    Explore Hotel AR
+                </div>
+
+                <h2 class="section-title">
+                    Our Gallery
+                </h2>
+
+                <p>
+                    Take a glimpse at the comfort and elegance
+                    waiting for you.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item gallery-1"></div>
+
+                <div class="gallery-item gallery-2"></div>
+
+                <div class="gallery-item gallery-3"></div>
+
+                <div class="gallery-item gallery-4"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BOOKING CTA
+    ===================================================== -->
+
+    <section id="booking">
 
         <div class="container">
 
             <h2>
-                Make Your Stay Memorable
+                Make Your Stay
+                <span class="gold">Memorable</span>
             </h2>
 
             <p>
-                Book your stay at Hotel AR and experience
-                comfort, elegance and exceptional hospitality.
+                Ready for a comfortable and relaxing stay?
+                Contact Hotel AR today and reserve your room.
             </p>
 
             <a href="#contact" class="btn">
@@ -1130,70 +1555,118 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
 
-    <section id="contact"
-        style="padding:80px 20px;text-align:center;background:#fff;">
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section id="contact">
 
         <div class="container">
 
-            <div class="section-title">
+            <div class="heading-center">
 
-                <span>
+                <div class="section-label">
                     Get In Touch
-                </span>
+                </div>
 
-                <h2>
+                <h2 class="section-title">
                     Contact Hotel AR
                 </h2>
 
+                <p>
+                    Have a question or want to make a booking?
+                    We are here to help.
+                </p>
+
             </div>
 
-            <p style="margin-bottom:15px;">
-                <i class="fas fa-phone"></i>
-                +91 98765 43210
-            </p>
 
-            <p style="margin-bottom:15px;">
-                <i class="fas fa-envelope"></i>
-                reservations@hotelar.com
-            </p>
+            <div class="contact-grid">
 
-            <p>
-                <i class="fas fa-map-marker-alt"></i>
-                Noida, Uttar Pradesh, India
-            </p>
+
+                <div class="contact-box">
+
+                    <i class="fas fa-phone"></i>
+
+                    <h4>
+                        Call Us
+                    </h4>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <h4>
+                        Email Us
+                    </h4>
+
+                    <p>
+                        reservations@hotelar.com
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <i class="fas fa-map-marker-alt"></i>
+
+                    <h4>
+                        Visit Us
+                    </h4>
+
+                    <p>
+                        Noida, Uttar Pradesh, India
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
 
-    <footer id="main-footer">
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
 
         <div class="footer-logo">
-            HOTEL AR
+            HOTEL <span class="footer-gold">AR</span>
         </div>
 
         <p>
             Luxury • Comfort • Hospitality
         </p>
 
-        <p style="margin-top:10px;">
-            Hotel AR &copy; 2026. All Rights Reserved.
+        <p style="margin-top:12px;">
+            © 2026 Hotel AR. All Rights Reserved.
         </p>
 
     </footer>
 
 
-    <!-- ================= WHATSAPP ================= -->
+
+    <!-- =====================================================
+         WHATSAPP
+    ===================================================== -->
 
     <a href="https://wa.me/919876543210"
         class="whatsapp"
         target="_blank"
-        aria-label="Chat on WhatsApp">
+        aria-label="Contact Hotel AR on WhatsApp">
 
         <i class="fab fa-whatsapp"></i>
 
@@ -1203,4 +1676,3 @@
 </body>
 
 </html>
-```
